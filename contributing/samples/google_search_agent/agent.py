@@ -15,12 +15,13 @@
 from google.adk import Agent
 from google.adk.tools import google_search
 from google.genai import Client
+import os
 
 # Only Vertex AI supports image generation for now.
-client = Client()
+client = Client(api_key=os.environ.get("AIzaSyASN3y7kN4yhQRp6J6jmacc1y5EDXEhUvk"))
 
 root_agent = Agent(
-    model='gemini-2.0-flash-001',
+    model='gemini-2.5-flash',
     name='root_agent',
     description="""an agent whose job it is to perform Google search queries and answer questions about the results.""",
     instruction="""You are an agent whose job is to perform Google search queries and answer questions about the results.

@@ -14,8 +14,8 @@
 
 """Data science agent."""
 
-from google.adk.agents.llm_agent import Agent
-from google.adk.code_executors.built_in_code_executor import BuiltInCodeExecutor
+from google.adk import Agent
+from google.adk.code_executors import BuiltInCodeExecutor
 
 
 def base_system_instruction():
