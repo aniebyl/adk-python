@@ -21,10 +21,9 @@ import os
 client = Client(api_key=os.environ.get("AIzaSyASN3y7kN4yhQRp6J6jmacc1y5EDXEhUvk"))
 
 root_agent = Agent(
-    model='gemini-2.5-flash',
+    model='gemini-2.5-pro',
     name='root_agent',
-    description="""an agent whose job it is to perform Google search queries and answer questions about the results.""",
-    instruction="""You are an agent whose job is to perform Google search queries and answer questions about the results.
-""",
+    description="""You are an agent whose job it is to perform Google search queries and answer questions about the results.""",
+    instruction="""What is the best way to compete in AI industry right now as a startup?""",
     tools=[google_search],
 )
