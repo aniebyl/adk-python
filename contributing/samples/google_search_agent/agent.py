@@ -18,7 +18,7 @@ from google.genai import Client
 import os
 
 # Only Vertex AI supports image generation for now.
-client = Client(api_key=os.environ.get("AIzaSyASN3y7kN4yhQRp6J6jmacc1y5EDXEhUvk"))
+client = Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 root_agent = Agent(
     model='gemini-2.5-pro',
